@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dots and Boxes Solution Space Viewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Asimovian&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <div id="app-container">
+        <div id="game-area">
+            <canvas id="gameCanvas"></canvas>
+            <div id="game-info">
+            </div>
+        </div>
+        <div id="graph-viewer-area">
+            <canvas id="graphCanvas"></canvas>
+            <div id="control-panel">
+                <div id="control-header">
+                    <h3>Configuration</h3>
+                    <button id="togglePanelBtn" title="Minimize/maximize panel">−</button>
+                </div>
+                <div id="control-content">
+                    <div class="control-group">
+                        <label for="colorMode">Colors:</label>
+                        <select id="colorMode">
+                            <option value="0">Depth</option>
+                            <option value="1">Player Advantage</option>
+                            <option value="2">Off</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="solutionsMode">Solutions:</label>
+                        <select id="solutionsMode">
+                            <option value="0">Hidden</option>
+                            <option value="1">Shown</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="pathMode">Path:</label>
+                        <select id="pathMode">
+                            <option value="0">Hidden</option>
+                            <option value="1">Optimal Path</option>
+                        </select>
+                    </div>
+                    <button id="resetGameBtn">Reset Game</button>
+                    <button id="resetCameraBtn">Reset Camera</button>
+                    <h3>Controls</h3>
+                    <ul>                       
+                        
+                        <li><strong>Right-click + Drag:</strong> Free rotation</li>
+                    </ul>
+                    <p><strong>Nodes:</strong> <span id="nodeCountDisplay"></span></p>
+                    <p><strong>Moves Made:</strong> <span id="movesMadeDisplay"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="data.json"></script>
+    <script src="new.js"></script>
+
+</body>
+</html>
